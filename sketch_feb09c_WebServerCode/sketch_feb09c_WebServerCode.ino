@@ -8,7 +8,7 @@
   or for ESP8266 nodeMCU
   https://randomnerdtutorials.com/esp8266-web-server/
 
-  Below setup is for ESP32 nodeMCU.
+  Below setup is for ESP32 nodeMCU
 *********/
 
 // Load Wi-Fi library
