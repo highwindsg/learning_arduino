@@ -25,10 +25,12 @@ WiFiServer server(80);
 String header;
 
 // Auxiliar variables to store the current output state
+String output25State = "off";
 String output26State = "off";
 String output27State = "off";
 
 // Assign output variables to GPIO pins
+const int output25 = 25;
 const int output26 = 26;
 const int output27 = 27;
 
@@ -42,9 +44,11 @@ const long timeoutTime = 2000;
 void setup() {
   Serial.begin(115200);
   // Initialize the output variables as outputs
+  pinMode(output25, OUTPUT);
   pinMode(output26, OUTPUT);
   pinMode(output27, OUTPUT);
   // Set outputs to LOW
+  digitalWrite(output25, LOW);
   digitalWrite(output26, LOW);
   digitalWrite(output27, LOW);
 
@@ -90,7 +94,15 @@ void loop(){
             client.println();
             
             // turns the GPIOs on and off
-            if (header.indexOf("GET /26/on") >= 0) {
+            if (header.indexOf("GET /25/on") >= 0) {
+              Serial.println("GPIO 25 on");
+              output25State = "on";
+              digitalWrite(output25, HIGH);
+            } else if (header.indexOf("GET /25/off") >= 0) {
+              Serial.println("GPIO 25 off");
+              output25State = "off";
+              digitalWrite(output25, LOW);
+            } else if (header.indexOf("GET /26/on") >= 0) {
               Serial.println("GPIO 26 on");
               output26State = "on";
               digitalWrite(output26, HIGH);
@@ -121,6 +133,15 @@ void loop(){
             
             // Web Page Heading
             client.println("<body><h1>ESP32 Web Server</h1>");
+
+            // Display current state, and ON/OFF buttons for GPIO 25  
+            client.println("<p>GPIO 25 - State " + output25State + "</p>");
+            // If the output25State is off, it displays the ON button       
+            if (output25State=="off") {
+              client.println("<p><a href=\"/25/on\"><button class=\"button\">ON</button></a></p>");
+            } else {
+              client.println("<p><a href=\"/25/off\"><button class=\"button button2\">OFF</button></a></p>");
+            }
             
             // Display current state, and ON/OFF buttons for GPIO 26  
             client.println("<p>GPIO 26 - State " + output26State + "</p>");
