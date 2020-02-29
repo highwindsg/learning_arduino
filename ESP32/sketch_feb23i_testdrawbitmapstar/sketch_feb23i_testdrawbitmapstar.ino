@@ -1,3 +1,10 @@
+/**************************************************************************
+ GND port to RND port
+ VCC port to 3V3
+ SCL port to D22
+ SDA port to D21
+ **************************************************************************/
+
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
