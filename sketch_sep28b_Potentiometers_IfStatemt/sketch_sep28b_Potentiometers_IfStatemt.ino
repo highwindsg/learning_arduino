@@ -23,10 +23,10 @@ void loop() {
   Serial.print("Potentiometer voltage is ");
   Serial.println(V2);
   
-  if (V2 > 2 && V2 < 3) { // use the && to means 'and'.
+  if (V2 >= 2 && V2 <= 3) { // use the && to means 'and'.
     digitalWrite(redPin, HIGH);
   }
-  if (V2 < 2 || V2 > 3) { // use the || to means 'or'.
+  if (V2 <= 2 || V2 >= 3) { // use the || to means 'or'.
     digitalWrite(redPin, LOW);
   }
   
