@@ -1,5 +1,5 @@
 /* https://www.youtube.com/watch?v=ORNted-NgRM&t=460s
-Using a potentiometer 1-K Ohm */
+Using a potentiometer 1-K Ohm, a red LED, a 330 Ohm resistor. */
 
 int myPin = A2; // declare a var that is connected to analog A2 Pin.
 int readVal;  // declare a var for reading a value from the potentiometer.
@@ -23,13 +23,21 @@ void loop() {
   Serial.print("Potentiometer voltage is ");
   Serial.println(V2);
   
-  if (V2 >= 2 && V2 <= 3) { // use the && to means 'and'.
+  if (V2 >= 2 && V2 <= 3) { // use the && to mean 'and'.
     digitalWrite(redPin, HIGH);
   }
-  if (V2 <= 2 || V2 >= 3) { // use the || to means 'or'.
+  if (V2 <= 2 || V2 >= 3) { // use the || to mean 'or'.
     digitalWrite(redPin, LOW);
   }
   
   delay(dt);
 
 }
+
+/* Homework:
+ *  Improve the project to include 3 LEDs (green, yellow and red).
+ *  Which means will need 3 pinMode, 3 resistors, 3 LEDs var names.
+ *  If voltage is under 3 volts, light up green LED.
+ *  If voltage is between 3 and 4 volts, light up yellow LED.
+ *  If voltage is above 4 volts, light up red LED.
+ */
