@@ -1,11 +1,11 @@
 /* https://www.youtube.com/watch?v=ORNted-NgRM&t=460s
-Using a potentiometer 1-K Ohm, a red LED, a 330 Ohm resistor. */
+Using a potentiometer 10K Ohm, a red LED, a 330 Ohm resistor. */
 
 int myPin = A2; // declare a var that is connected to analog A2 Pin.
 int readVal;  // declare a var for reading a value from the potentiometer.
 float V2; // declare a var that contains the voltage that is with decimal places.
-int dt = 250;
-int redPin = 9;
+int dt = 250; // declare a var that sets the delay time.
+int redPin = 9; // declare a var that sets the voltage pin for the red LED.
 
 void setup() {
   // put your setup code here, to run once:
@@ -22,7 +22,8 @@ void loop() {
   V2 = (5./1023.) * readVal;
   Serial.print("Potentiometer voltage is ");
   Serial.println(V2);
-  
+
+  // If the condition in the () is True, then the code in {} will be executed.
   if (V2 >= 2 && V2 <= 3) { // use the && to mean 'and'.
     digitalWrite(redPin, HIGH);
   }
