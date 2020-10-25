@@ -1,9 +1,10 @@
 // https://www.youtube.com/watch?v=7wKdxsvXAFo&t=3s
+// Dimming a LED
 
-int potPin = A1;
-int redPin = 6;
-int potVal;
-float LEDVal;
+int potPin = A1;  // var for potentiometer analog Pin on Arduino board.
+int redPin = 6; // var for LED on PWN pin on Arduino board.
+int potVal; // var for potentiometer value.
+float LEDVal; // var for decimal value of LED.
 
 void setup() {
   // put your setup code here, to run once:
