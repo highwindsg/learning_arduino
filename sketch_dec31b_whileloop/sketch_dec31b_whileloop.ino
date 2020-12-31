@@ -28,3 +28,5 @@ digitalWrite(redPin,LOW);   // And so if the potentiometer value is NOT greater 
                             // then the red LED will not light up.
 
 }
+
+// https://www.youtube.com/watch?v=CITZIv3SmvU
