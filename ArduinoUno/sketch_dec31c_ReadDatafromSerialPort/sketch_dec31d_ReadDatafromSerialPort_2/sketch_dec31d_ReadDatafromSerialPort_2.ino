@@ -1,11 +1,10 @@
 int myNumber;
-String msg = "Please Enter Your Number: ";
-String msg2 = "Your Number is: ";
+String msg = "How many blinks do you want: ";
+//String msg2 = "Your Number is: ";
 
 void setup() {
   // put your setup code here, to run once:
 Serial.begin(9600);
-
 }
 
 void loop() {
@@ -13,7 +12,6 @@ void loop() {
 Serial.println(msg);  // We ask.
 
 while (Serial.available() == 0){  // We wait.
-  
 }
 
 myNumber = Serial.parseInt(); // We read it.
