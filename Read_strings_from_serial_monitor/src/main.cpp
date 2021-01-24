@@ -18,7 +18,7 @@ while (Serial.available()==0) {
 }
 myName = Serial.readString();
 Serial.print(msg2);
-Serial.print(myName);
+Serial.println(myName);
 Serial.println(msg3);
 
 }

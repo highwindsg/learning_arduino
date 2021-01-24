@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../../Arduino Blink Test"
+		},
+		{
+			"name": "ESP32 Blink Test",
+			"path": "../../Arduino Blink Test/ESP32 Blink Test"
+		},
+		{
+			"name": "Read_strings_from_serial_monitor",
+			"path": "../../Read_strings_from_serial_monitor"
+		},
+		{
+			"name": "ReadingStrFromSerialMonitor_LEDs",
+			"path": "../ReadingStrFromSerialMonitor_LEDs"
+		}
+	],
+	"settings": {}
+}
