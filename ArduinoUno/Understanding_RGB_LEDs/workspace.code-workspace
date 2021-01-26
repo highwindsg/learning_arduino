@@ -13,11 +13,11 @@
 		},
 		{
 			"name": "ReadingStrFromSerialMonitor_LEDs",
-			"path": "."
+			"path": "../ReadingStrFromSerialMonitor_LEDs"
 		},
 		{
 			"name": "Understanding_RGB_LEDs",
-			"path": "../Understanding_RGB_LEDs"
+			"path": "."
 		}
 	],
 	"settings": {}

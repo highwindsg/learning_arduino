@@ -28,24 +28,31 @@ while (Serial.available() == 0){
 
 myColor = Serial.readString();
 
-if (myColor == "red" || myColor == "Red"){
+if (myColor == "red" || myColor == "Red") {
   digitalWrite(redPin,HIGH);
   digitalWrite(greenPin,LOW);
   digitalWrite(bluePin,LOW);
 
 }
 
-if (myColor == "green" || myColor == "Green"){
+if (myColor == "green" || myColor == "Green") {
   digitalWrite(redPin,LOW);
   digitalWrite(greenPin,HIGH);
   digitalWrite(bluePin,LOW);
 
 }
 
-if (myColor == "blue" || myColor == "Blue"){
+if (myColor == "blue" || myColor == "Blue") {
   digitalWrite(redPin,LOW);
   digitalWrite(greenPin,LOW);
   digitalWrite(bluePin,HIGH);
+
+}
+
+if (myColor == "off" || myColor == "Off") {
+  digitalWrite(redPin,LOW);
+  digitalWrite(greenPin,LOW);
+  digitalWrite(bluePin,LOW);
 
 }
 
