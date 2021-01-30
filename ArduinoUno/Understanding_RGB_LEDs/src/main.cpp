@@ -66,4 +66,6 @@ if (myColor == "off" || myColor == "Off") {
 
 /* Homework:
 Get colors cyan, magentap, yellow, orange & fuchsia.
+Ref to URl below for color codes:
+https://fopp.umsi.education/books/published/fopp/Iteration/NestedIterationImageProcessing.html
 */
