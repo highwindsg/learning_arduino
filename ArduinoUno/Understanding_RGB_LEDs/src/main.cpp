@@ -50,8 +50,43 @@ if (myColor == "blue" || myColor == "Blue") {
 
 if (myColor == "aqua" || myColor == "Aqua") {
   digitalWrite(redPin, LOW);
-  analogWrite(greenPin, 255);
+  analogWrite(greenPin, 255); // when using numeric or decimal RGB code, must use analogWrite.
   analogWrite(bluePin, 80);
+
+}
+
+if (myColor == "cyan" || myColor == "Cyan") {
+  digitalWrite(redPin, LOW);
+  analogWrite(greenPin, 255);
+  analogWrite(bluePin, 255);
+
+}
+
+if (myColor == "magenta" || myColor == "Magenta") {
+  analogWrite(redPin, 255);
+  digitalWrite(greenPin, LOW);
+  analogWrite(bluePin, 255);
+
+}
+
+if (myColor == "yellow" || myColor == "Yellow") {
+  analogWrite(redPin, 255);
+  analogWrite(greenPin, 140);
+  digitalWrite(bluePin, LOW);
+
+}
+
+if (myColor == "orange" || myColor == "Orange") {
+  analogWrite(redPin, 255);
+  analogWrite(greenPin,20);
+  digitalWrite(bluePin, LOW);
+
+}
+
+if (myColor == "fuchsia" || myColor == "Fuchsia") {
+  analogWrite(redPin, 255);
+  digitalWrite(greenPin, LOW);
+  analogWrite(bluePin, 255);
 
 }
 
@@ -65,7 +100,7 @@ if (myColor == "off" || myColor == "Off") {
 }
 
 /* Homework:
-Get colors cyan, magentap, yellow, orange & fuchsia.
+Get colors cyan, magenta, yellow, orange & fuchsia.
 Ref to URl below for color codes:
 https://fopp.umsi.education/books/published/fopp/Iteration/NestedIterationImageProcessing.html
 */
