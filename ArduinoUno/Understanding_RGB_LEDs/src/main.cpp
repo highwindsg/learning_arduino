@@ -55,26 +55,26 @@ if (myColor == "aqua" || myColor == "Aqua") {
 
 }
 
-if (myColor == "cyan" || myColor == "Cyan") {
+/*if (myColor == "cyan" || myColor == "Cyan") {
   digitalWrite(redPin, LOW);
   analogWrite(greenPin, 255);
   analogWrite(bluePin, 255);
 
-}
+}*/
 
-if (myColor == "magenta" || myColor == "Magenta") {
+/*if (myColor == "magenta" || myColor == "Magenta") {
   analogWrite(redPin, 255);
   digitalWrite(greenPin, LOW);
   analogWrite(bluePin, 255);
 
-}
+}*/
 
-if (myColor == "yellow" || myColor == "Yellow") {
+/*if (myColor == "yellow" || myColor == "Yellow") {
   analogWrite(redPin, 255);
   analogWrite(greenPin, 140);
   digitalWrite(bluePin, LOW);
 
-}
+}*/
 
 if (myColor == "orange" || myColor == "Orange") {
   analogWrite(redPin, 255);
@@ -90,6 +90,27 @@ if (myColor == "fuchsia" || myColor == "Fuchsia") {
 
 }
 
+if (myColor == "yellow" || myColor == "Yellow") {
+  analogWrite(redPin, 255);
+  analogWrite(greenPin, 100);
+  analogWrite(bluePin, 0);
+
+}
+
+if (myColor == "cyan" || myColor == "Cyan") {
+  analogWrite(redPin, 0);
+  analogWrite(greenPin, 255);
+  analogWrite(bluePin, 255);
+
+}
+
+if (myColor == "magenta" || myColor == "Magenta") {
+  analogWrite(redPin, 255);
+  analogWrite(greenPin, 0);
+  analogWrite(bluePin, 255);
+
+}
+
 if (myColor == "off" || myColor == "Off") {
   digitalWrite(redPin, LOW);
   digitalWrite(greenPin, LOW);
@@ -100,7 +121,8 @@ if (myColor == "off" || myColor == "Off") {
 }
 
 /* Homework:
-Get colors cyan, magenta, yellow, orange & fuchsia.
+Get colors cyan, magenta, yellow, orange & fuchsia. = DONE.
+Note that different combination of RGB codes can produce up to a max of 16 million colors.
 Ref to URl below for color codes:
 https://fopp.umsi.education/books/published/fopp/Iteration/NestedIterationImageProcessing.html
 */
